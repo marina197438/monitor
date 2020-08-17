@@ -1,0 +1,52 @@
+#capa1{
+    background-color: green;
+    color:white;
+    font-family: Verdana, Tahoma, sans-serif;
+    border-radius: 5px;
+    margin:0 20px;
+    height: 100px;
+    padding: 10px;
+}
+ul{
+    list-style-type: none;
+    width: 160px;
+    font-size: 20px;
+}
+li{
+    background-color: green;
+    margin:10px;
+    height:40px;
+    border-radius: 5px;
+}
+#capa3{
+    background-color: rgb(46, 181, 235);
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius:10px;
+    position: relative;
+    height:260px;
+    top:140px;
+    right:12%;
+    width:180px;
+   
+}
+#capa2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    width: 60%;
+    margin:140px 250px;
+    position: absolute;
+    top:10px;
+}
+#capa4{
+    background-color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    height: 80px;
+    font-size: 10px;
+    margin: 50 130px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid black;
+
+}
