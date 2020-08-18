@@ -21,17 +21,17 @@ li{
 #capa3{
     background-color: rgb(46, 181, 235);
     color:white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
     border-radius:10px;
     position: relative;
     height:260px;
-    top:140px;
-    right:12%;
+    bottom:200px;
+    left:100%;
     width:180px;
    
 }
 #capa2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana,Tahoma, sans-serif;
     font-size: 12px;
     width: 60%;
     margin:140px 250px;
@@ -40,13 +40,23 @@ li{
 }
 #capa4{
     background-color: grey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 80%;
+    font-family: Verdana, Tahoma, sans-serif;
+    width: 100%;
     height: 80px;
     font-size: 10px;
     margin: 50 130px;
     border-radius: 10px;
     text-align: center;
     border: 1px solid black;
-
+    position:relative;
+    bottom:180px;
+}
+a{
+    text-decoration: none;
+    padding:10px;
+    color:white;
+}
+#a:hover{
+    color:grey;
+    background-color: rgb(91, 235, 91)
 }
