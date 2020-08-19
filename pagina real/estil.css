@@ -1,0 +1,23 @@
+.container{
+    background-color:rgb(3, 95, 83);
+}
+#capa1{
+    background-color: white;
+    width:200px;
+    height: 150px;
+    position: relative;
+
+}
+#capa2{
+    background-color: white;
+    width:200px;
+    height: 150px;
+    position: relative;
+}
+#capa3{
+    background-color: white;
+    width:200px;
+    height: 150px;
+    position: relative;
+}
+
