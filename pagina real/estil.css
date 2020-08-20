@@ -1,5 +1,20 @@
+#cabecera{
+    background-color: blue;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    color:blue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.prod{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
 .container{
-    background-color:rgb(3, 95, 83);
+    background-color:rgb(21, 113, 119);
     margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
@@ -7,28 +22,29 @@
 }
 #capa1{
     background-color: white;
-    width:240px;
-    height: 300px;
+    width:260px;
+    height: 330px;
     position: absolute;
     top: 100px;
     left: 95px;
+    font-size: 15px;
 
 }
 #capa2{
     background-color: white;
-    width:240px;
-    height: 300px;
+    width:260px;
+    height: 330px;
     position: absolute;
     top:100px;
-    left: 370px;
+    left: 400px;
 }
 #capa3{
     background-color: white;
-    width:240px;
-    height: 300px;
+    width:260px;
+    height: 330px;
     position:absolute;
     top:100px;
-    right: 450px;
+    right: 390px;
 }
 #capa4{
     background-color: white;
@@ -36,33 +52,41 @@
     height: 300px;
     position: absolute;
     top:100px;
-    right: 170px;
+    right: 130px;
 }
 #capa5{
     background-color: white;
     width: 240px;
     height: 200px;
     position: absolute;
-    bottom: 100px;
+    bottom: 30px;
+    left: 95px;
 }
 #capa6{
     background-color: white;
-    width: 200px;
-    height: 150px;
+    width: 240px;
+    height: 200px;
     position: absolute;
+    bottom: 30px;
+    left: 370px;
 
 }
 #capa7{
     background-color: white;
-    width: 200px;
-    height: 150px;
+    width: 240px;
+    height: 200px;
     position: absolute;
+    bottom:30px;
+    right: 450px;
+
 }
 #capa8{
     background-color: white;
-    width:200px;
-    height: 150px;
+    width:240px;
+    height: 200px;
     position: absolute;
+    right: 170px;
+    bottom:30px;
 
 }
 
