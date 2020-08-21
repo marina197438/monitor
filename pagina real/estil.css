@@ -1,3 +1,15 @@
+#principal{
+    height: 150px;
+    background-color:rgb(32, 32, 129);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line: none;
+    color:white;
+}
+
+.row{
+    color: white;
+    font-size: 18px;
+}
 #cabecera{
     background-color: blue;
 }
@@ -69,6 +81,7 @@ body{
     position: absolute;
     bottom: 30px;
     left: 95px;
+    text-align: left;
 }
 #capa6{
     background-color: white;
