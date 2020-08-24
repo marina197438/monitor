@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style type="text/css">
-        a{
-            color:black;
-            text-decoration: none;
-            width: 150px;
-            height: 35px;
-            background-color:red;
-            border: 1px solid black;
-            display: block;
-            text-align: center;
-            padding-top: 10px;
-            margin: 80px;
-            transition: backgorund-color 3s;
+    <script>
+        function mostrar_data(){
+           
+            var d=new Date();
+            var dia=d.getDate();
+            var mes=d.getMonth()
+            window.alert((mes+1));
         }
-        a:hover{
-            background-color: rgb(235, 78, 78)
-        }
-    </style>
+    </script>
     <tittle></tittle>
     <meta>       
         <body> 
-           <a href="https://www.google.com">aprieta</a>
+           <input type="button" value="dale" onclick="mostrar_data()">
         </body>
     </head>
 </html>
