@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    function comprobar(){
+        var edad=document.getElementById("text_edad").value;
+        if(edad>=18){
+          window.alert("bienvenido!");  
+        }
+        else{
+            window.alert("no tienes la edad para entrar");
+        }
+    }
+    </script>
+    <tittle></tittle>
+    <meta>       
+        <body> 
+            <label>edad:</label>
+            <input type="number" id="text_edad">
+            <input type="button" value="comprobar" onclick="comprobar()">
+        </body>
+    </head>
+</html>

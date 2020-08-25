@@ -2,22 +2,19 @@
 <html>
 <head>
     <script>
-        function mostrar_data(){
-           
-            var d=new Date();
-            var dia=d.getDate();
-            var mes=d.getMonth();
-            var fullyear=d.getFullYear();
-            var hour=d.getHours();
-            var minutes=d.getMinutes();
-            var second=d.getSeconds();
-            window.alert("data" +dia +"/" +(mes+1) +"/" +fullyear +"hora" +hour +":" +minutes +":" +second);
+    function comprobar(){
+        var edad=document.getElementById("text_edad").value;
+        if(){
+          window.alert();  
         }
+        
+    }
     </script>
     <tittle></tittle>
     <meta>       
         <body> 
-           <input type="button" value="dale" onclick="mostrar_data()">
+            <input type="numero" id="text-edad">
+            <input type="button" value="mayoria" onclick="comprobar()"
         </body>
     </head>
 </html>

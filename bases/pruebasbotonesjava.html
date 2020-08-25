@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function comprobar(){
+            var temp=document.getElementById(text_temperatura)
+                if(temp<15){
+                    alert("ase frioh");
+            }
+                else{
+                     if(temp<25){
+                         alert("se ta bieng");
+                }
+                     else{
+                            alert("ase caloh");
+                }
+            }
+            var resultat=document.getElementById("resultat");
+                if(temp<15){
+                    resultat.innerHTML= "<img src=../bolitadenieve.jpeg>";
+                }
+                else{
+                    if(temp<25){
+                    resultat.innerHTML=""
+                    }
+                    else{
+                        resultat.innerHTML="<img src=../playamuertos.jpeg>"
+                    }
+                }
+
+        }
+    </script>
+    <style type="text/css">
+        div{
+            background-color: rebeccapurple;
+            width: 350px;
+            height: 350px;
+        }
+    </style>
+    <tittle></tittle>
+    <meta>       
+        <body> 
+            <select>
+                <option value="" onchange="">
+                    &nbsp;
+                </option>
+                <option>
+                    pulsera
+                </option>
+                <option>
+                    arco
+                </option>
+                <option>
+                    flecha
+                </option>
+            </select>
+            
+            <div id="resultat">
+
+            </div>
+        </body>
+    </head>
+</html>
