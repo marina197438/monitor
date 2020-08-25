@@ -6,22 +6,39 @@
            var comida=document.getElementById("select_comida").value;
            var resultat=document.getElementById("resultat");
            if(comida=="macarrones con carne"){
-               resultat.innerHTML="<img src='macarrones-con-berenjenas-y-carne-picada.jpeg'>"
+               resultat.innerHTML="<img src='monitor/macarronesconcarne.jpeg'>"
            }
            else{
                if(comida=="paella mixta"){
-                    resultat.innerHTML="<img src='paella-mixta.jpeg>"
+                    resultat.innerHTML="<img src='paellamixta.jpeg'>"
                }
                else{
                    if(comida=="sopa de marisco"){
-
+                       resultat.innerHTML="<img src='sopademarisco.jpeg'>"
+                   }
+               }
+           }
+       }
+       function segundo(){
+           var segundo=document.getElementById("select_segundo").value;
+           var resultat=document.getElementById("resultat");
+           if(){
+               resultat.innerHTML=""
+           }
+           else{
+               if(){
+                   resultat.innerHTML=""
+               }
+               else{
+                   if(){
+                       resultat.innerHTML=""
                    }
                }
            }
        }
    </script>
    <style type="text/css">
-
+        
    </style>
     <tittle></tittle>
     <meta>       
@@ -33,7 +50,12 @@
                 <option value="paella mixta">paella mixta</option>
                 <option value="sopa de marisco">sopa de marisco</option>
             </select>
-            
+            <select id="select_segundo" onclick="segundo()">
+                <option>&nbsp;</option>
+                <option value="calamares">calamares a la romana</option>
+                <option value="canelones">canelones de carne</option>
+                <option value="pollo">pollo con patatas</option>
+            </select>
         </body>
     </head>
 </html>
