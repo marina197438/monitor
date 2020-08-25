@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function material(){
+            var producte=document.getElementById("select_producte").value;
+            var resultat=document.getElementById("resultat");
+                if(producte=="rifle"){
+                   resultat.innerHTML="<img src='riflethelastofus.jpeg'>"
+                }
+                else{
+                    if(producte=="arco"){
+                        resultat.innerHTML="<img src='arcothelastofus2.jpeg'>"
+                    }
+                    else{
+                        if(producte=="pulsera"){
+                            resultat.innerHTML="<img src='pulserathelastofus.jpeg'>"
+                        }
+                    }
+                }
+               
+                   
+            
+
+        } 
+    </script>
+    <tittle></tittle>
+    <meta>       
+        <body> 
+            <select id="select_producte" onclick="material()">
+                <option value="&nbsp;" >
+                    &nbsp;   
+                </option>
+                <option value="pulsera">
+                    pulsera
+                </option>
+                <option value="rifle">
+                    rifle
+                </option>
+                <option value="arco">
+                    arco
+                </option>
+            </select>
+          
+            <div id="resultat">
+
+            </div>
+        </body>
+    </head>
+</html>
