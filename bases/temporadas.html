@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script>
+            function estacion(){
+                var estaciones=document.getElementById("estaciones");
+                var d=new Date();
+                var mes=d.getMonth();
+                if((mes==7)||(mes==8)||(mes==9)){
+                    
+                    estaciones.innerHTML="<img src='elmoinfierno.jpeg'>"
+                }
+                else{
+                    if((mes==0)||(mes==1)||(mes==2)){
+                    estaciones.innerHTML="<img src='congelado.jpeg'>"
+                    }
+                }
+            }
+        </script>
+        <style>
+        #estaciones{
+            background-color: violet;
+            height: 400px;
+            width: 400px;
+        }
+        img{
+            width:350px;
+            height: 300px;
+        }
+        </style>
+    <tittle></tittle>
+    <meta>       
+        <body> 
+             <label>estaciones:</label>
+             <select id="select_temporadas" onclick="estacion()">
+                <option>&nbsp;</option>
+                <option>Invierno</option>
+                <option>Verano</option>
+                <option>Primavera</option>
+                <option>Otoño</option>
+            </select>
+            <div id="estaciones">
+                
+                
+            </div>
+        
+        </body>
+    </head>
+</html>
