@@ -3,10 +3,10 @@
 <head>
    <script language="javascript">
        function comida(){
-           var comida=document.getElementById("select_comida").value;
-           ;
+            var comida=document.getElementById("select_comida").value;
+            var resultat=document.getElementById("resultat");
            if(comida=="macarrones con carne"){
-               comida.innerHTML="<img src='monitor/macarronesconcarne.jpeg'>"
+               resultat.innerHTML="<img src='macarronesconcarne.jpeg'>"
            }
            else{
                if(comida=="paella mixta"){
@@ -22,39 +22,43 @@
        function segundo(){
            var segundo=document.getElementById("select_segundo").value;
            var resultat=document.getElementById("resultat");
-           if(){
-               resultat.innerHTML=""
-           }
-           else{
-               if(){
-                   resultat.innerHTML=""
-               }
-               else{
-                   if(){
-                       resultat.innerHTML=""
-                   }
-               }
-           }
        }
    </script>
    <style type="text/css">
         
+        #resultat{
+           background-color: rgb(126, 126, 252);
+           width: 200px;
+           height: 220px;
+           text-align: center;
+        }
+        img{
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            top:180px;
+            left:20px;
+        }
    </style>
-    <tittle></tittle>
+    <tittle><h1>Restaurant</h1></tittle>
     <meta>       
         <body> 
+            
             <h2>Primer</h2>
             <select id="select_comida" onclick="comida()">
-                <option >&nbsp;</option>
-                <option value="macarrones  con carne">macarrones con carne</option>
+                <option>&nbsp;</option>
+                <option value="macarrones con carne">macarrones con carne</option>
                 <option value="paella mixta">paella mixta</option>
                 <option value="sopa de marisco">sopa de marisco</option>
             </select>
-            <select id="select_segundo" onclick="segundo()">
+            <div id="resultat">
+
+            </div>
+            <select id="text_segundo" onclick="segundo()">
                 <option>&nbsp;</option>
-                <option value="calamares">calamares a la romana</option>
-                <option value="canelones">canelones de carne</option>
-                <option value="pollo">pollo con patatas</option>
+                <option>Calamares a la romana</option>
+                <option>canelones de carne</option>
+                <option>pollo con patatas</option>
             </select>
         </body>
     </head>

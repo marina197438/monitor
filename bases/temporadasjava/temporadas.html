@@ -6,13 +6,23 @@
                 var estaciones=document.getElementById("estaciones");
                 var d=new Date();
                 var mes=d.getMonth();
-                if((mes==7)||(mes==8)||(mes==9)){
+                if((mes==6)||(mes==7)||(mes==8)){
                     
                     estaciones.innerHTML="<img src='elmoinfierno.jpeg'>"
                 }
                 else{
                     if((mes==0)||(mes==1)||(mes==2)){
                     estaciones.innerHTML="<img src='congelado.jpeg'>"
+                    }
+                    else{
+                        if((mes==3)||(mes==4)||(mes==5)){
+                            estaciones.innerHTML="<img src='primaveradora.jpeg'>"
+                        }
+                        else{
+                            if((mes==9)||(mes==10)||(mes==11)){
+                                estaciones.innerHTML="<img src='phineas.jpeg'>"
+                            }
+                        }
                     }
                 }
             }
