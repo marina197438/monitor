@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script> 
+            function saborhelado(){
+                var helados=[["heladofresa.jpeg","tarrinafresa.jpeg",""],
+                            ["heladovainilla.jpeg","tarrinavainilla.jpeg","especialvainilla.jpeg"],
+                            ["heladochocolate.jpeg","tarrinachocolate.jpeg","especialchocolate.jpeg"],
+                            ["heladolimon.jpeg","tarrinalimon.jpeg"]];
+                var helados=document.getElementById("helado");
+                var gusto=document.getElementById("helado");
+                var tipo=document.getElementById("helad");
+                var helado=document.getElementById("helado");
+                helado.innerHTML="<img src='"+helados[helado]+"'>"
+            }
+        </script>
+    <tittle></tittle>
+    <meta>       
+        <body> 
+            <div id="helado" class="container">
+            </div>
+                <div class="row">
+                        <h3>Gust</h3>
+                        <select id="gusto" onchange="saborhelado()">
+                            <option value=""></opotion>
+                            <option value="0">Fresa</option>
+                            <option value="1">Vainilla</option>
+                            <option value="2">Chocolate</option>
+                            <option value="3">Nata</option>
+                        </select>
+                    <div class="col-sm">
+                        <h3>Tipus</h3>
+                        <select id="tipo" onchange="saborhelado">
+                            <option value=""></option>
+                            <option value="0">Cucurucho</option>
+                            <option value="1">Tarrina</option>
+                            <option value="2">Especial</option>
+                        </select>
+                    </div>
+                </div>
+        </body>
+    </head>
+</html>
