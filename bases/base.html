@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <script>
-            function comprobar(){
-                var d=new Date();
-                var dia=d.getDay();
-                switch(dia){
-                   case 0:
-                   case 6:
-                        alert("a descansar dos dias")
-                        break
-                    default:
-                        alert("a trabajar vago");
-                        break
-                }
-                
-            }
+        <script> 
         </script>
     <tittle></tittle>
     <meta>       
         <body> 
-            <input type="button" value="dale we" onclick="comprobar()">
+            <div id="container1">
+                <h1>RESTAURANT</h1>
+            </div>
+            <h2>Primer plato</h2>
+            <select id="plat" onchange="escogeplato()">
+                <option value=""></option>
+                <option value="0">Macarrones</option>
+                <option value="1">Paella mixta</option>
+                <optioin value="2">Sopa de marisco</optioin>
+            </select>
+            <div id="container2">
+                
+            </div>
         </body>
     </head>
 </html>

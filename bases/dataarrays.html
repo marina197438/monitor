@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script>
+           
+        </script>
+    <tittle></tittle>
+    <meta>       
+        <body> 
+            <script language="javascript">
+                function comprobar(){
+                    var d=new Date();
+                    var mesos=[" de Gener","de Febrer","de Març","d'Abril","de Maig","de Juny","de Juliol","d'Agost","de Septembre","de Octubre","de Novembre","de Desembre"];
+                    var dies=["Dilluns","Dimarts","Dimecres","Dijous","Divendres","Dissabte","Diumenge"];
+                    var dia=d.getDay();
+                    var numdia=d.getDay();
+                    var mes=d.getMonth();
+                if(mes){
+                alert("avui es dia "+dies[dia] +numdia +" " +mesos[mes])
+                }
+            }
+            </script>
+            <input type="button" value="meses" onclick="comprobar()">
+        </body>
+    </head>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script>
+           function cogerplato(){
+               var plats=["macarronesconcarne.jpeg","calamares.jpeg","paellamixta.jpeg","sopademarisco.jpeg"];
+               var plat=document.getElementById("plat").value;
+               var capa=document.getElementById("capafoto");
+               capa.innerHTML="<img src='"+plats[plat]+"'>"
+
+           }
+        </script>
+    <tittle></tittle>
+    <meta>       
+        <body> 
+            <select id="plat"onchange="cogerplato()">
+                <option value=""></option>
+                <option value="0">macarrones</option>
+                <option value="1">Calamares</option>
+                <option value="2">Paella mixta</option>
+                <option value="3">Sopa de marisco</option>
+            </select>
+            <div id="capafoto">
+
+            </div>
+        </body>
+    </head>
+</html>
