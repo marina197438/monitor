@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+                <script language="javascript">
+                    function calcula(){
+                    document.getElementById("text_calcular").value;
+                    var num;
+                    document.write("<table border='1' width='600'>")
+                        for(i=0;i<11;i++){
+                            document.write("<tr><td>"+num"</td>");
+                            document.write("<td>"+i+"</td>");
+                            document.write("<td>"+i*7+"</td></tr>");
+                        }
+                    }
+                    document.write("</table>")
+                </script>
+</head>      
+    
+        <body> 
+            <label>Numero:</label>
+            <input type="text" id="text_calcular">
+           <input type="button" value="calcular" onclick="calcula()">
+        </body>
+</html>

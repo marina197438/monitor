@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <script> 
-            
-        </script>
-    <tittle></tittle>
-    <meta>       
-        <body> 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        One of three columns
-                    </div>
-                    <div class="col-sm">
-                        One of three columns
-                    </div>
-                    <div class="col-sm">
-                        One of three columns
-                    </div>
-                </div>
-            </div>
-        </body>
-    </head>
+    <script>
+        function mostrar_fotos(){
+            var fotos=["sinsajo.jpeg","tatuthelastofus2.jpeg","thelastofus2.jpeg"]
+            var capa=document.getElementById("capa0")
+            capa.innerHTML="<img src='"+jugadors[0]+"'"
+        }
+    </script>
+</head>       
+    <body> 
+        <input type="button" value="comprobar" onclick="mostrar_fotos()">
+        <div id="capa0">
+
+        </div> 
+        <div id="capa1">
+
+        </div>
+        <div id="capa2">
+
+        </div>
+    </body>
 </html>
