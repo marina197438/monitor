@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function mostrar_fotos(){
+            var fotos=["sinsajo.jpeg","tatuthelastofus2.jpeg","thelastofus2.jpeg"]
+            var i=0;
+            for(i=0;i<fotos.length;i++){
+            var capa=document.getElementById("capa"+i)
+            capa.innerHTML="<img src='"+fotos[i]+"'>";
+            }
+        }
+    </script>
+</head>       
+    <body> 
+        <input type="button" value="comprobar" onclick="mostrar_fotos()">
+        <div id="capa0">
+
+        </div> 
+        <div id="capa1">
+
+        </div>
+        <div id="capa2">
+
+        </div>
+    </body>
+</html>
