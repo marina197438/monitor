@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript">
+        //apuntes: el segon var jugadors es que es fan del reves, en cas de que volguem que la llista vagi desde l'últim al primer.
+        //jugadors.reverse();= va millor que el boto for.
+        var jugadors=["Ellie","Lauren","Camila","Dina","Sasha","Maeve"]
+        var I=0;
+            for(I=0;I<jugadors.length;I++){
+                document.write(jugadors[I])
+                document.write("<br>")
+            }
+        var jugadors=["Ellie","Lauren","Camila","Dina","Sasha","Maeve"]
+        var I=0;
+            for(I=jugadors.length-1;I>=0;I--){
+                document.write(jugadors[I])
+                document.write("<br>")
+            }
+        jugadors.reverse();
+    </script>
+    <script language="javascript">
+        var jugador="Joel";"Tess";"Tommy";"Maria";"Jesse";"Abby";
+        for(jugador in jugadors){
+            document.write(jugador)
+            document.write("<br>")
+        }
+
+    </script>
+</head>       
+    <body> 
+        
+    </body>
+</html>

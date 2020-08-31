@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript">
+        //mirarlo mas veces
+            var jugadors=["Ellie","Sasha","Enzo","Maeve","Dina","Joel"];
+            var I=0;
+            function afegir(){
+                var jugador=document.getElementById("jugador").value;
+                var capa=document.getElementById("capa");
+                jugadors.push(jugador);
+                capa.innerHTML +=jugadors[I]+"<br>";
+                document.write(jugadors)
+                for(I=0;I<jugadors.length;I++){
+                    capa.innerHTML +=jugadors[I]+"<br>"
+                }
+            }
+    </script>
+    <style >
+        #capa{
+            background-color: aqua;
+            color: black;
+            width: 250px;
+            height: 200px;
+        }
+    </style>
+</head>       
+    <body> 
+        <label>jugador:</label>
+        <input type="text" id="jugador">
+        <input type="button" value="afegir" onclick="afegir()">
+        <div id="capa">
+
+        </div>
+    </body>
+</html>

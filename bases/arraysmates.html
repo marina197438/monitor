@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript">
+        //math.random nos da decimales entre 0-1.
+        //para redondearlo hay que hacer esto
+        //math.ceil arrodoneix mes amunt.
+        //math.floo arrodoneix a l'inferior
+            function calcular(){
+                var num=Math.round(Math.random()*5);
+                alert(num)
+            }
+    </script>
+</head>       
+    <body> 
+       <input type="button" value="calcular" onclick="calcular()">
+    </body>
+</html>
