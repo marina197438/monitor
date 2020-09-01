@@ -40,10 +40,11 @@
     </style>
 </head>       
     <body>
-        <input type="button" value="mostrar" id="boton1">
-        <input type="button" value="esconder" id="boton2">
+        <input type="button" value="esconder" id="boton1">
+        <input type="button" value="mostrar" id="boton2">
         <input type="button" value="alternativo" id="boton3">
         <input type="button" value="direccional" id="boton4">
+
         <div id="capa1">
 
         </div>
@@ -56,5 +57,90 @@
         <div id="capa4">
 
         </div><br>
+        <script language="javascript">
+            $(function(){
+                $("#boton1").click(function(){
+                    $("#capa1").hide();
+                });
+            });
+            $(function(){
+                $("#boton2").click(function(){
+                    $("#capa1").show();
+                });
+            });
+            $(function(){
+                $("#boton3").click(function(){
+                    $("#capa1").toggle()
+                });
+            });
+            $(function(){
+                $("#boton4").click(function(){
+                    $("#capa1").slideToggle();
+                });
+            });
+            $(function(){
+                $("#boton1").click(function(){
+                    $("#capa2").toggle();
+                });
+            });
+            $(function(){
+                $("#boton2").click(function(){
+                    $("#capa2").hide();
+                });
+            });
+            $(function(){
+                $("#boton3").click(function(){
+                    $("#capa2").slideToggle();
+                });
+            });
+            $(function(){
+                $("#boton4").click(function(){
+                    $("#capa2").show();
+                });
+            });
+            $(function(){
+                $("#boton1").click(function(){
+                    $("#capa3").show();
+                });
+            });
+            $(function(){
+                $("#boton2").click(function(){
+                    $("#capa3").slideToggle();
+                });
+            });
+            $(function(){
+                $("#boton3").click(function(){
+                    $("#capa3").hide();
+                });
+            });
+            $(function(){
+                $("#boton4").click(function(){
+                    $("#capa3").toggle();
+                });
+            });
+            $(function(){
+                $("#boton1").click(function(){
+                    $("#capa4").slideToggle();
+                });
+            });
+            $(function(){
+                $("#boton2").click(function(){
+                    $("#capa4").toggle();
+                });
+            });
+            $(function(){
+                $("#boton3").click(function(){
+                    $("#capa4").hide();
+                });
+            });
+            $(function(){
+                $("#boton4").click(function(){
+                    $("#capa4").show()
+                });
+            });
+            $(document).ready(function(){
+                alert("Este es el final!")
+            });
+        </script>
     </body>
 </html>
