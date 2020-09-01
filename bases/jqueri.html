@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="javascript">
+        function comprobar(){
+            var err=false;
+            var text_nom=document.getElementById("text_nom").value;
+            var formulari=document.getElementById("inscripcion");
+            var pass=pass.trim("pepito");
+            if(text_nom==""){
+                alert("obligatorio");
+                pass=pass.trim()
+                pass=pass.toLowerCase()
+                err=true;
+            }
+            if(text_nom.length<3){
+                alert("el nombre tiene que tener almenos 3 caracteres")
+                err=true;
+            }
+            if(err==false){
+                formulari.submit()
+            }
+        }
+        function entra(){
+            pass=pass.trim()
+            if(pass.trim()=="pepito"){
+                alert("puedes entrar");
+                err=true;
+            }
+        }
+        function correo(){
+            pass=pass.toLowerCase
+            if(correo.indexOf("@")==-1){
+                
+            }
+        }
+    </script>
+</head>       
+    <body> 
+        <form method="post" action="" id="inscripcion">
+            <label for="">usuario:</label>
+            <input type="usuari"><br><br>
+            <label for="">contraseña:</label>
+            <input type="password"><br><br>
+            <label for="">repite contraseña:</label>
+            <input type="password"><br><br>
+            <input type="button" value="inside" onclick="entra()"><br><br>
+            <input type="text"><br>
+            <input type="password"><br>
+            <input type="button" value="entra" onclick="correo()"><br>
+            
+            <label for="text_nom">nom:</label>
+            <input type="text" name="nom" id="text_nom">
+            <input type="button" value="comprobar" onclick="comprobar()">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <style type="text/css">
+        #capa1{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+        </style>
+</head>       
+    <body>
+        <label id="text_nom">nom:</label>
+        <input type="text" name="nom" id="text_nombre">
+        <div id="capa1">
+            <h1>asco de life</h1>
+        </div>
+        <input type="button" value="boton" id="boton1">
+        <script>
+        $(function(){
+            $("#boton1").click(function(){
+                $("#text_nombre").val("tuvida");
+            });
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <style>
+    #boto1{
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+    }
+    </style>
+</head>       
+    <body> 
+        <div id="capa1">
+
+        </div>
+        <input type="button" value="mostrar" id="boto1">
+        <input type="button" value="amagar" id="boto2">
+        <input type="button" value="alternar" id="boto3">
+        <script>
+            //cada boton tiene que tener un id diferente
+        $(function(){
+            $("#boto1").click(function(){
+                $("#capa1").hide();
+            });
+        });
+        $(function(){
+            $("#boto2").click(function(){
+                $("#capa1").show();
+            });
+        });
+        $(function(){
+            $("#boto3").click(function(){
+                $("#capa1").toggle();
+            });
+        });
+        </script>
+    </body>
+</html>
