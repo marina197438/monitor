@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <style type="text/css">
+            #capa1{
+            }
+        </style>
+</head>
+<div id="capa">       
+    <body> 
+        <input type="button" value="Hibern" id="boton1">
+        <input type="button" value="Primavera"id="boton2">
+        <input type="button" value="Estiu" id="boton3">
+        <input type="button" value="Tardor" id="boton4">
+            <div id="capa1">
+                <h1>Ropa Friki</h1>
+            </div>
+                <div  id="capa2">
+                    <img src="thepromisedneverland.jpeg" width="215" id="img1">
+                </div>
+                    <div id="capa3">
+                        <p>
+                            <ol>
+                                <li> Material: fibra de poliéster de alta calidad, tejido ligero y seguro, con alta resistencia y 
+                                         recuperación elástica, resistencia a las arrugas y comodidad de uso.</li>
+                                <li>Regalo: la sudadera de cosplay de Promised Neverland es de dibujos animados y única. Esta es la mejor 
+                                    opción para los fanáticos a los que les gusta el anime japonés, los fanáticos de The Promised Neverland y 
+                                    los fanáticos que buscan la singularidad.</li>
+                                <li>Jersey con cremallera de moda: diseño con capucha, sudadera con cremallera de moda con cordón, suéter con cremallera de manga larga. El diseño de bolsillo de la sudadera puede mantener el calor y transportar objetos pequeños, lo cual es muy conveniente.</li>
+                                <li>Ocasión: esta sudadera con capucha es muy adecuada para el uso diario, adecuada para fiestas de disfraces, representaciones teatrales, juegos de rol, Halloween, fiestas temáticas y otras actividades.</li>
+                                <li>Tamaño: el suéter es de TAMAÑO ASIÁTICO, consulte la tabla de tallas del producto para elegir una sudadera adecuada.</li>
+                            </ol>    
+                        </p>
+                    </div>
+        <script>
+            $(function(){
+                $("#boton1").click(function(){
+                    $("#capa").css("background-image","url='invierno.jpeg'");
+                    $("#capa1").css("color","blue");
+                    $("#capa2").css("","")
+                });
+            });
+            $(function(){
+                $("#boton2").click(function(){
+                    $("#capa").css("background-image","url=`primavera.jpeg´");
+                    $("#capa1").css("color","yellow");
+                    $("capa2").css("","");
+                });
+            });
+            $(function(){
+                $("boton3").click(function(){
+                    $("#capa").css("background-image","url=`verano.jpeg´");
+                    $("#capa1").css("color","green");
+                });
+            });
+        </script>
+    </body>
+</div>
+</html>

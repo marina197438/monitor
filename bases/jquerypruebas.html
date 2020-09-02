@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+</head>       
+    <body> 
+        <form>
+            <label>Nom:</label><br>
+            <input type="text" name="nombre" id="text_nom"><br>
+            <label>email:</label><br>
+            <input type="text" name="email" id="text_email"><br>
+            <label>Telefon:</label><br>
+            <input type="text" name="telefon" id="text_telefon"><br>
+            <label>Comentaris:</label><br>
+            <input type="text" name="comentario" id="text_comentari"><br>
+            <input type="button"value="enviar" id="boton1">
+        </form>
+        <script language="javascript">
+            $(function(){
+                $("#boton1").click(function(){
+                    if($("#text_nom").val()==""){
+                        //alert("te falta el nombre!")
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

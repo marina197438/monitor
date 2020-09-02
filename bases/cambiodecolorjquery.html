@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+</head>       
+    <body> 
+        <form>
+            <label>Nom:</label><br>
+            <input type="text" name="nombre" id="text_nom" class="cuadro"><br>
+            <label>email:</label><br>
+            <input type="text" name="email" id="text_email" class="cuadro"><br>
+            <label>Telefon:</label><br>
+            <input type="text" name="telefon" id="text_telefon" class="cuadro"><br>
+            <label>Comentaris:</label><br>
+            <input type="text" name="comentario" id="text_comentari" class="cuadro"><br>
+            <input type="button"value="enviar" id="boton1">
+        </form>
+        <script language="javascript">
+            $(function(){
+                $("#boton1").click(function(){
+                    if($(".cuadro").val()==""){
+                        $(this).css("background-color","red")
+                    }
+                });
+                $("#text_nom").focus(function(){
+                    $("#text_nom").css("background-color","white")
+                });
+            });
+            $(function(){
+                $("#boton1").click(function(){
+                    if($("#text_email").val()==""){
+                        $("#text_email").css("background-color","red")
+                    }
+                });
+                $("#text_email").focus(function(){
+                    $("#text_email").css("background-color","white")
+                });
+            })
+            $(function(){
+                $("#boton1").click(function(){
+
+                });
+            });
+        </script>
+    </body>
+</html>
