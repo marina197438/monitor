@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <style type="text/css">
+        .titolcolor{
+            color:red;
+            text-decoration: underline;
+            font-size: 28px;
+        }
+        .primavera{
+
+        }
+        .primavera h1{
+
+        }
+        .primavera p{
+            
+        }
+        </style>
+</head>       
+    <body> 
+        <div>
+            <h1>hola</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa lacus, sagittis at metus eu, porta imperdiet tellus. 
+                Phasellus nisl mauris, tristique sit amet venenatis at, interdum quis velit. Fusce varius tincidunt odio quis euismod. Proin 
+                lacus augue, pellentesque ac orci at, cursus feugiat ex. Sed gravida, sapien et dapibus scelerisque, neque nisl lobortis nulla,
+                dignissim rhoncus tellus risus in odio.</p>
+        </div>
+        <input type="button" value="color" id="boton_color">
+        <input type="button" value="quitar color" id="boton1">
+        <input type="button" value="toggle color" id="toggle_color">
+        <script>
+            $(function(){
+                $("#boton_color").click(function(){
+                    $('h1').addClass('titolcolor');
+                    $('h1').removeClass('titolcolor');
+                    $('h1').toggleClass('titolcolor');
+                });
+            });
+        </script>
+    </body>
+</html>
