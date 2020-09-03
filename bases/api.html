@@ -13,8 +13,21 @@
         <input type="button" value="cotillax2" id="boton1">
         <input type="button" value="cotillax3" id="boton2">
         <h1></h1>
-        <p></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis metus, commodo sit amet lectus sed, fermentum sollicitudin
+            enim. Sed ac iaculis nisl, id fringilla sapien. Duis eget lacus ultricies, rutrum elit vitae, tempus felis. Suspendisse quis 
+            nulla lorem. In lacinia mauris at pharetra lacinia. Phasellus sollicitudin, arcu vel ornare accumsan, sem libero viverra nisi,
+            non malesuada justo tellus a leo. Donec efficitur augue massa, vel accumsan metus ultricies eget.</p>
        <script>
+           $(function(){
+               $("#boton").click(function(){
+                   $.get('https://jsonplaceholder.typicode.com/posts/1/comments',function(data,status){
+                       alert(data.name)
+                   });
+               });
+           });
+           $(function(){
+               $
+           });
            
        </script>
     </body>
