@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        
+</head>       
+    <body> 
+
+        <input type="button" value="mostrar" id="boton">
+        
+       <script>
+           $(function(){
+               $("#boton").click(function(){
+                   $.get('https://jsonplaceholder.typicode.com/posts/1',function(data,status){
+                       alert(data.title)
+                   });
+               });
+           });
+       </script>
+    </body>
+</html>

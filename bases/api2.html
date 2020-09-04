@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        
+</head>       
+    <body> 
+        <h1 id="titulo">Ejemplo</h1>
+        <img src="tatuthelastofus2.jpeg" id="foto">
+        <input type="button" value="mostrar" id="boton">
+        <script language="javascript">
+            $(function(){
+                $("#boton").click(function(){
+                    $.get('https://jsonplaceholder.typicode.com/photos/1',function(data,status){
+                        $("#titulo").html(data.title)
+                        $("#foto").attr('src',data.url)
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
