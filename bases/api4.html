@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <style type="text/css">
+        </style>
+</head>       
+    <body> 
+        <input type="button" value="mostrar" id="boton">
+        <div id="capa">
+           
+        </div>
+        <script language="javascript">
+         $(function(){
+             $("#boton").click(function(){
+                 $.get('https://jsonplaceholder.typicode.com/users',function(data,status){
+                     var I=0
+                     for(I=0;I<data.length;I++){
+                     var user=data[I]
+                     $("#capa").append(user.name+"<br>")
+                     $("#capa").append(user.email+"<br>")
+                     var address=data[0].address
+                     $("#capa").append(user.address.street+"<br>")
+                     $("#capa").append("<hr>")
+                    }
+                 });
+             });
+         });
+        </script>
+    </body>
+</html>

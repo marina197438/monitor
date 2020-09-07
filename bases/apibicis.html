@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <style type="text/css">
+        #capa{
+            background-color: antiquewhite;
+            border: 1px solid #552255;
+
+        }
+        </style>
+</head>       
+    <body> 
+        <h1>Bicicletas</h1>
+        <input type="button" value="mostrar" id="boton">
+        <div id="capa">
+           
+        </div>
+        <script language="javascript">
+            $(function(){
+                $("#boton").click(function(){
+                    $.get('https://cors-anywhere.herokuapp.com/http://server.boka2.com/ws/bicis.json',function(data,status){
+                        var user=data.data.stations[0]
+                        var I=0
+                        for(I=0;I<data.data.stations.length;I++){
+                        $("#capa").append(data.data.stations[I].station_id +"<br>")
+                        $("#capa").append(user.num_bikes_available+"<br>")
+                        var status=user.bikes_available_types
+                        $("#capa").append(user.num_bikes_available_types.mechanical+"<br>")
+                        $("#capa").append(user.num_bikes_available_types.ebike+"<br>")
+                        $("#capa").append(user.num_docks_available+"<br>")
+                        $("#capa").append(user.is_installed+"<br>")
+                        $("#capa").append(user.is_renting+"<br>")
+                        $("#capa").append(user.is_returning+"<br>")
+                        $("#capa").append(user.last_reported+"<br>")
+                        $("#capa").append(user.is_charging_station+"<br>")
+                        $("#capa").append(user.status+"<br>")
+                        $("#capa").append("<hr>")
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
