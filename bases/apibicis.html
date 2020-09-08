@@ -19,11 +19,11 @@
         .tarjeta.vermell{
             background-color: rgb(255, 0, 0);
         }
-        .tarjeta.verd{
-            background-color: green;
-        }
         .tarjeta.taronja{
             background-color: orange;
+        }
+        .tarjeta.verd{
+            background-color: green;
            }
         </style>
 </head>       
@@ -37,18 +37,19 @@
             $(function(){
                 $("#boton").click(function(){
                     $.get('https://cors-anywhere.herokuapp.com/https://api.bsmsa.eu/ext/api/bsm/gbfs/v2/en/station_status',function(data,status){
-                        var user=data.data.stations[0]
                         var I=0
                         for(I=0;I<data.data.stations.length;I++){
-                            if(user.num_bikes_available<=5){
+                            var user=data.data.stations[I]
+                            if(user.num_bikes_available==0){
                                 $("#capa").append('<div class="tarjeta vermell"><p>'+data.data.stations[I].station_id +'<p><p>'+user.num_bikes_available+'<p><p>'+user.num_bikes_available_types.mechanical+'<p><p>'+user.num_bikes_available_types.ebike+'<p><p>'+user.num_docks_available+'<p><p>'+user.is_installed+'<p><p>'+user.is_renting+'<p><p>'+user.is_returning+'<p><p>'+user.last_reported+'<p><p>'+user.is_charging_station+'<p><p>'+user.status+'<p></div>')
                             }
                             else{
-                                $("#capa").append('<div class="tarjeta verd"><p>'+data.data.stations[I].station_id +'<p><p>'+user.num_bikes_available+'<p><p>'+user.num_bikes_available_types.mechanical+'<p><p>'+user.num_bikes_available_types.ebike+'<p><p>'+user.num_docks_available+'<p><p>'+user.is_installed+'<p><p>'+user.is_renting+'<p><p>'+user.is_returning+'<p><p>'+user.last_reported+'<p><p>'+user.is_charging_station+'<p><p>'+user.status+'<p></div>')
-                            
-                            }
-                            if(user.num_bikes_available==10){
+                                if(user.num_bikes_available<=14){
                                 $("#capa").append('<div class="tarjeta taronja"><p>'+data.data.stations[I].station_id +'<p><p>'+user.num_bikes_available+'<p><p>'+user.num_bikes_available_types.mechanical+'<p><p>'+user.num_bikes_available_types.ebike+'<p><p>'+user.num_docks_available+'<p><p>'+user.is_installed+'<p><p>'+user.is_renting+'<p><p>'+user.is_returning+'<p><p>'+user.last_reported+'<p><p>'+user.is_charging_station+'<p><p>'+user.status+'<p></div>')
+                                }
+                            }
+                            if(user.num_bikes_available>=15){
+                                $("#capa").append('<div class="tarjeta verd"><p>'+data.data.stations[I].station_id +'<p><p>'+user.num_bikes_available+'<p><p>'+user.num_bikes_available_types.mechanical+'<p><p>'+user.num_bikes_available_types.ebike+'<p><p>'+user.num_docks_available+'<p><p>'+user.is_installed+'<p><p>'+user.is_renting+'<p><p>'+user.is_returning+'<p><p>'+user.last_reported+'<p><p>'+user.is_charging_station+'<p><p>'+user.status+'<p></div>')
                             }
                         }
                     });

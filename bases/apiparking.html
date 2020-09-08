@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <style type="text/css">
+        .tarjeta{
+            background-color: antiquewhite;
+            border: 1px solid #552255;
+            width: 250px;
+            height: 380px;
+            float: left;
+            position: relative;
+            margin:40px;
+        }
+        </style>
+</head>       
+    <body> 
+        <input type="button" value="mire su parquing" id="boton">
+        <div id="capa">
+           
+        </div>
+        <script language="javascript">
+         $(function(){
+             $("#boton").click(function(){
+                 $.get('https://cors-anywhere.herokuapp.com/http://server.boka2.com/ws/parquings.json',function(data,status){
+                     var I=0
+                     for(I=0;I<data.ParkingList.Parking.length;I++){
+                        var user=data.ParkingList.Parking[I]
+                        if(){
+                        $("#capa").append('<div="tarjeta"><p>'+data.ParkingList.Parking[I].ParkingCode+'<p><p>'+user.Name+'<p><p>'+user.Address+'<p><p>'+user.ParkingAccess.Access.AccessID+'<p><p>'+user.ParkingAccess.Access.AccessAddress+'<p><p>'+user.ParkingAccess.Access.Longitude+'<p><p>'+user.ParkingAccess.Access.Latitude+'<p><p>'+"<hr>"+'<p></div>')   
+                        }
+                    }
+                 });
+             });
+         });
+        </script>
+    </body>
+</html>

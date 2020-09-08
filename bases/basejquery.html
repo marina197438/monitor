@@ -6,37 +6,28 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
         <style type="text/css">
-        #capa{
-            background-color: antiquewhite;
-            width: 250px;
-            height: 250px;
-            border: 1px solid #555555;
-            float: left;
-            position: relative;
-        }
+        
         </style>
 </head>       
     <body> 
-        <input type="button" value="mostrar" id="boton">
+        <h1>PHOTOS</h1>
+        <input type="button" value="muestra" id="boton">
         <div id="capa">
            
         </div>
         <script language="javascript">
-         $(function(){
-             $("#boton").click(function(){
-                 $.get('https://cors-anywhere.herokuapp.com/http://server.boka2.com/ws/seleccions.json',function(data,status){
-                     var user=data.Seleccions[0]
-                     var I=0
-                     for(I=0;I<data.Seleccions.length;I++){
-                    $("#capa").append(data.Seleccions[I].title+"<br>")
-                    $("#capa").append(user.nombrePlaces+"<br>")
-                    $("#capa").append(user.ens)
-                    $("#capa").append("capa")
-                    $("#capa").append("<hr>")
-                    }
-                 });
-             });
-         });
+            $(function(){
+                $("#boton").click(function(){
+                    $.get('https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=ab481822e3a3ffd44253a624ee0335db&page=2&format=json&nojsoncallback=1',function(data,status){
+                        var I=0
+                        for(I=0;I<data.photos.photo.length;I++){
+                            var photo=data.photos.photo[I]
+                            $("#capa").append(photo.title+"<br>")
+                            $("#capa").append('<img src="https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg"><br>')
+                        }
+                    });
+                });
+            });
         </script>
     </body>
 </html>
