@@ -6,24 +6,62 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
         <style type="text/css">
-        
+        body{
+            background-color: rgba(255,100,175,0.5);
+        }
+        img{
+            float: left;
+            position: relative;
+            width: 300px;
+            height: 350px;
+            margin:10px;
+        }
+        #capa2{
+            width:550px;
+            height: 500px;
+            background-color: aqua;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius:20px;
+            position:absolute;
+            right: -100px;
+            top:50px;
+            transition: right 1s;
+        }
         </style>
 </head>       
     <body> 
         <h1>PHOTOS</h1>
+        <input type="text" value="" id="fotos">
+        <select id="numero">
+            <option></option>
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+        </select>
         <input type="button" value="muestra" id="boton">
         <div id="capa">
            
         </div>
+        <div id="capa2">
+
+        </div>
+        <input type="button" value="1">
+        <input type="button" value="2">
+        <input type="button" value="3">
+        <input type="button" value="4">
         <script language="javascript">
             $(function(){
                 $("#boton").click(function(){
-                    $.get('https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=ab481822e3a3ffd44253a624ee0335db&page=2&format=json&nojsoncallback=1',function(data,status){
-                        var I=0
-                        for(I=0;I<data.photos.photo.length;I++){
-                            var photo=data.photos.photo[I]
-                            $("#capa").append(photo.title+"<br>")
-                            $("#capa").append('<img src="https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg"><br>')
+                    var capa=document.getElementById("fotos").value;
+                    $.get('https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0558dda4ed8ce29a002c7f6cc7e3a51e&text='+capa+'&format=json&nojsoncallback=1',function(data,status){
+                       var I=0
+                       for(I=0;I<data.photos.photo.length;I++){
+                           var fotos=document.getElementById("capa").value;
+                           var photo=data.photos.photo[I]
+                            $("#capa").append(photo.tile)
+                            $("#capa").append('<img src="https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg">');
+
                         }
                     });
                 });
